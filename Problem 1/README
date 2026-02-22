@@ -1,0 +1,61 @@
+# Student Record Management System (CRUD)
+
+## Problem Chosen
+Problem 1 – Student Record Management System (CRUD Operations)
+
+## Project Overview
+This project is a **simple command-line Student Management System** that demonstrates the basic **CRUD operations**:
+- Create
+- Read
+- Update
+- Delete
+
+The system uses an **in-memory list** to store student records and allows users to interactively manage student data through a menu-driven interface.
+
+This project helps in understanding:
+- Python data structures (lists and dictionaries)
+- Function-based program design
+- User input handling
+- Basic data management logic
+
+---
+
+## Features
+The system supports the following operations:
+
+1. **Add Student**
+   - Add a new student with ID, name, and age.
+
+2. **View Students**
+   - Display all stored student records.
+
+3. **Update Student**
+   - Modify the details of an existing student using Student ID.
+
+4. **Delete Student**
+   - Remove a student record using Student ID.
+
+5. **Exit**
+   - Safely exit the program.
+
+---
+
+## Data Storage
+- Student records are stored in an **in-memory Python list**.
+- Each student is represented using a **dictionary**.
+- No hardcoded data is used.
+- Data persists only during program execution.
+
+---
+
+## Technologies Used
+- Python 3
+- Core Python libraries only (no external dependencies)
+
+---
+
+## How to Run the Project
+
+1. Clone or download the repository:
+   ```bash
+   git clone <your-github-repo-link>
