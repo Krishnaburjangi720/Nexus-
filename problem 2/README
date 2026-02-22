@@ -55,3 +55,17 @@ Bob,92
 Charlie,65
 David,88
 Eva,45
+
+## 🚀 How to Run the Project
+
+### ✅ Prerequisites
+
+Make sure the following are installed on your system:
+- Python 3.x
+- Required Python libraries:
+  - pandas
+  - matplotlib
+
+Install the required libraries using:
+```bash
+pip install pandas matplotlib
