@@ -1,0 +1,57 @@
+# 🎓 Student Marks Analyzer
+
+A lightweight Python utility designed to automatically detect, analyze, and visualize student performance data from CSV files.  
+This tool uses **Pandas** for intelligent data parsing and **Matplotlib** for clear and informative visualizations.
+
+---
+
+## 🚀 Features
+
+- **Smart Column Detection**  
+  Automatically identifies columns containing *marks* or *scores*, even if headers contain extra spaces or inconsistent casing.
+
+- **Statistical Insights**  
+  Calculates:
+  - Average score
+  - Highest score
+  - Lowest score
+
+- **Data Visualization**  
+  Generates:
+  - Histogram showing score distribution  
+  - Mean (average) baseline for better performance interpretation
+
+- **Robust Error Handling**  
+  Validates dataset structure before analysis to avoid runtime errors.
+
+---
+
+## 🧠 Problem Chosen
+
+**Problem 3 – Student Marks Analyzer (Pandas + Matplotlib)**
+
+**PDF Requirements Covered:**
+- Load CSV file  
+- Calculate average marks  
+- Identify highest and lowest scores  
+- Generate histogram visualization  
+
+---
+
+## 📂 Dataset Requirements
+
+- File format: **CSV**
+- Must contain **at least one numeric column** related to:
+  - Marks
+  - Score
+- Column name may vary (e.g., `Marks`, `Score`, `Math Score`, `student_marks`)
+- Dataset must be placed in the **same directory** as the Python script
+
+### Example Dataset
+```csv
+Name,Marks
+Alice,78
+Bob,92
+Charlie,65
+David,88
+Eva,45
