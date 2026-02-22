@@ -1,0 +1,40 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# 1. Load data and clean headers in one go
+df = pd.read_csv("Student_Marks.csv")
+df.columns = df.columns.str.strip().str.lower()
+
+# 2. Use a more robust way to find the score column
+# This looks for any column containing 'mark' or 'score'
+score_cols = [col for col in df.columns if any(word in col for word in ['mark', 'score'])]
+
+if not score_cols:
+    raise ValueError("No marks/score column found in dataset. Check your CSV headers!")
+
+# Pick the first match
+target_col = score_cols[0]
+scores = df[target_col]
+
+# 3. Print Summary Stats (using f-strings for cleaner output)
+print(f"--- Analysis for: {target_col.title()} ---")
+print(f"Average: {scores.mean():.2f}")
+print(f"Highest: {scores.max()}")
+print(f"Lowest:  {scores.min()}")
+
+# 4. Improved Visualization
+plt.figure(figsize=(10, 6))
+# Using a specific color and edge color makes the bars distinct
+plt.hist(scores, bins=10, color='#3498db', edgecolor='white', alpha=0.8)
+
+# Add a vertical line for the average - great for context!
+plt.axvline(scores.mean(), color='red', linestyle='dashed', linewidth=2, label=f'Avg: {scores.mean():.1f}')
+
+plt.title(f"Distribution of {target_col.title()}", fontsize=14, pad=15)
+plt.xlabel("Score Range", fontsize=12)
+plt.ylabel("Number of Students", fontsize=12)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.legend()
+
+plt.tight_layout() # Prevents label cutoff
+plt.show()
